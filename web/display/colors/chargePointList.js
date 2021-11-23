@@ -55,7 +55,7 @@ class ChargePointList {
           d3.select(".soctext-" + i).text(" ")
         }
         d3.select(".plugsymbol-" + i).classed("hide", !cp.isPluggedIn); // is plugged in
-        d3.select(".plugsymbol-" + i).classed("text-green", cp.isCharging); // is charging
+        d3.select(".plugsymbol-" + i).classed("text-green animate-alertPulsation", cp.isCharging); // is charging
         d3.select(".plugsymbol-" + i).classed("text-orange", !cp.isCharging); // is not charging
         d3.select(".finishsymbol-" + i).classed("hide", !cp.willFinishAtTime); // charge for completion time
         d3.select(".nightsymbol-" + i).classed("hide", !cp.chargeAtNight); // charge at night

@@ -104,7 +104,7 @@ class ChargePointList {
           .attr("class", "fa fa-xs fa-plug")
         ;
       span.classed("text-orange", (!row.isCharging))
-      span.classed("text-green", row.isCharging)
+      span.classed("text-green animate-alertPulsation", row.isCharging)
     }
     if (row.willFinishAtTime) {
       cell.append("span")
